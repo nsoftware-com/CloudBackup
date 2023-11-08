@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F7E21001-385E-43DF-BD66-387DB450A2E2}</ProjectGuid>
+    <AssemblyName>gmailbackup-async</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <OutputFileFolder>.\gmailbackup-async</OutputFileFolder>
+    <RootNamespace>gmailbackup</RootNamespace>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="licenses.licx" />
+  </ItemGroup>  
+  <ItemGroup>
+    <Reference Include="nsoftware.CloudBackup">
+      <HintPath>..\..\lib\nsoftware.CloudBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="nsoftware.CloudBackup.System">
+      <HintPath>..\..\lib\nsoftware.CloudBackup.System.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gmailbackup-async.cs" />
+  </ItemGroup>
+</Project>
